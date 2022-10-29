@@ -36,7 +36,7 @@ echo -e "[+] Escaneando todo el rango de puertos de $1 \n"
 
 for port in {1..65535} ; do
 
-        timeout 1 bash -c "echo "" > /dev/tcp/$1/$port 2>/dev/null" && echo -e "[+] Puerto $port abierto \n"
+        timeout 1 bash -c "echo "" > /dev/tcp/$1/$port" 2>/dev/null && echo -e "[+] Puerto $port abierto \n"
 
 
 done
