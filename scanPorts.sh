@@ -1,8 +1,5 @@
 #!/bin/bash
 
-timeout 1 ping -c 1 $1 &>/dev/null
-
-
 function ctrl_c () {
 
         echo ;
@@ -13,6 +10,9 @@ function ctrl_c () {
 
 
 trap ctrl_c INT
+
+
+timeout 1 ping -c 1 $1 &>/dev/null
 
 
 if test $? -ne 0 ; then
