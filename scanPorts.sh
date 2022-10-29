@@ -18,12 +18,13 @@ timeout 1 ping -c 1 $1 &>/dev/null
 if test $? -ne 0 ; then
 
         echo ;
-        echo -e "[!] Ayuda: bash $0 <Direccion IP/Nombre de dominio> \n"
+        echo "[!] Ayuda: bash $0 <Direccion IP/Nombre de dominio>" ; echo
         exit 2
 
 elif test $# -ne 1 ; then
 
-        echo -e "[!] Ayuda: bash $0 <Direccion IP/Nombre de dominio> \n"
+        echo ;
+        echo "[!] Ayuda: bash $0 <Direccion IP/Nombre de dominio>" ; echo
         exit 3
 
 fi
