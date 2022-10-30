@@ -18,7 +18,7 @@ timeout 1 ping -c 1 $1 &>/dev/null
 if test $? -ne 0 ; then
 
         echo ;
-        echo "[!] Ayuda: bash $0 <Direccion IP/Nombre de dominio>" ; echo
+        echo "[!] La maquina no es accesible" ; echo
         exit 2
 
 elif test $# -ne 1 ; then
