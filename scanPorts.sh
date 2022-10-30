@@ -32,7 +32,7 @@ fi
 
 echo ;
 
-echo -e "[+] Escaneando todo el rango de puertos de $1 \n"
+echo -e "[+] Escaneando todo el rango de puertos de $1 \n\n"
 
 
 for port in {1..65535} ; do
