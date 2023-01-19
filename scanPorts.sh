@@ -2,8 +2,7 @@
 
 function ctrl_c () {
 
-        echo ;
-        echo -e  "[!] Saliendo... \n"
+        echo -e  "\n[!] Saliendo... \n"
         sleep 1
         exit 1
 }
@@ -15,13 +14,13 @@ trap ctrl_c INT
 timeout 1 ping -c 1 $1 &>/dev/null
 
 
-if test $? -ne 0 ; then
+if [[ $? -ne 0 ]]; then
 
         echo ;
         echo "[!] La maquina no es accesible" ; echo
         exit 2
 
-elif test $# -ne 1 ; then
+elif [[ $# -ne 1 ]]; then
 
         echo ;
         echo "[!] Ayuda: bash $0 <Direccion IP/Nombre de dominio>" ; echo
@@ -30,12 +29,11 @@ elif test $# -ne 1 ; then
 fi
 
 
-echo ;
 
-echo -e "[+] Escaneando todo el rango de puertos de $1 \n\n"
+echo -e "\n[+] Escaneando todo el rango de puertos de $1 \n\n"
 
 
-for port in {1..65535} ; do
+for port in {1..65535}; do
 
         timeout 1 bash -c "echo "" > /dev/tcp/$1/$port" 2>/dev/null && echo -e "[+] Puerto $port abierto \n"
 
