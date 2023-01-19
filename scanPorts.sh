@@ -2,7 +2,7 @@
 
 function ctrl_c () {
 
-        echo -e  "\n[!] Saliendo... \n"
+        echo -e  "\n[!] Saliendo... \n \n"
         sleep 1
         exit 1
 }
@@ -16,14 +16,12 @@ timeout 1 ping -c 1 $1 &>/dev/null
 
 if [[ $? -ne 0 ]]; then
 
-        echo ;
-        echo "[!] La maquina no es accesible" ; echo
+        echo -e "\n[!] La maquina no es accesible \n \n"
         exit 2
 
 elif [[ $# -ne 1 ]]; then
 
-        echo ;
-        echo "[!] Ayuda: bash $0 <Direccion IP/Nombre de dominio>" ; echo
+        echo -e "\n[!] Ayuda: bash $0 <Direccion IP/Nombre de dominio> \n \n"
         exit 3
 
 fi
