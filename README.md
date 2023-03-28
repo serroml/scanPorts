@@ -1,5 +1,5 @@
 # scanPorts
-Un escáner de puertos simple escrito en bash.
+Un escáner de puertos simple escrito en Bash.
 
 Este script se basa en usar el pseudo dispositivo especial /dev/tcp/ para comprobar puertos abiertos en una máquina remota.
 
