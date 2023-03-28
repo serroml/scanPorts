@@ -9,6 +9,6 @@ Asigna al script permisos de ejecución:
 
 Uso:
 
-    bash scanPorts.sh <Dirección IP o nombre de dominio>
+    ./scanPorts.sh <Dirección IP o nombre de dominio>
 
 Nota: Este script solamente escanea puertos por medio del protocolo TCP, no permite escaneo de puertos por otros protocolos como UDP, SCTP... Etc.
